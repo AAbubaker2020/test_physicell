@@ -300,7 +300,7 @@ export default function HomePage() {
               <ul className="space-y-2">
                 {['Home', 'About', 'Features', 'Documentation', 'Download', 'Contact'].map((item) => (
                   <li key={item}>
-                    <Link href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}>
+                    <Link href={item === 'Features' ? '#' : item === 'Documentation' ? '#' :item === 'Download' ? '#' :item === 'Home' ? '/' :`/${item.toLowerCase()}`}>
                       <Button variant="link" className="text-[#555] hover:text-[#4CAF50] p-0 transition-colors duration-300">
                         {item}
                       </Button>
