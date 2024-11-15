@@ -6,8 +6,9 @@ import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card"
-import { BookOpen, Download, FileText, Grid, Home, Info, Mail, Menu, Microscope, X, CheckCircle, Users, Code, Globe, Quote, ChevronRight } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Menu, X, CheckCircle, Users, Code, Globe, Quote, ChevronRight } from 'lucide-react'
+
 
 const socialButtonStyles = {
   facebook: 'bg-[#1877F2] hover:text-[#1877F2] border-[#1877F2]',
