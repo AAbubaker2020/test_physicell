@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card"
-import { BookOpen, Download, FileText, Grid, Home, Info, Mail, Menu, Microscope, X, ChevronRight } from 'lucide-react'
+import { Download, FileText, Grid, Menu, Microscope, X, ChevronRight } from 'lucide-react';
 
 const socialButtonStyles = {
   facebook: 'bg-[#1877F2] hover:text-[#1877F2] border-[#1877F2]',
