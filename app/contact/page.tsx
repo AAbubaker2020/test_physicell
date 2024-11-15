@@ -6,9 +6,9 @@ import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import  Textarea  from "@/components/ui/textarea"
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
-import { Mail, Phone, MapPin, BookOpen, Download, FileText, Grid, Home, Info, Menu, Microscope, X, CheckCircle, Users, Code, Globe, Quote, ChevronRight } from 'lucide-react'
+import Textarea from "@/components/ui/textarea"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Mail, Phone, MapPin, Menu, X, Users, Grid } from 'lucide-react'
 
 const socialButtonStyles = {
   facebook: 'bg-[#1877F2] hover:text-[#1877F2] border-[#1877F2]',
@@ -17,51 +17,51 @@ const socialButtonStyles = {
 };
 
 export default function Contact() {
-const [isMenuOpen, setIsMenuOpen] = useState(false)
-const [activeSection, setActiveSection] = useState('')
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState('')
 
-const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
-useEffect(() => {
-  const handleScroll = () => {
-    const sections = ['contact-form', 'join-community']
-    const currentSection = sections.find(section => {
-      const element = document.getElementById(section)
-      if (element) {
-        const rect = element.getBoundingClientRect()
-        return rect.top <= 100 && rect.bottom >= 100
-      }
-      return false
-    })
-    if (currentSection) setActiveSection(currentSection)
-  }
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['contact-form', 'join-community']
+      const currentSection = sections.find(section => {
+        const element = document.getElementById(section)
+        if (element) {
+          const rect = element.getBoundingClientRect()
+          return rect.top <= 100 && rect.bottom >= 100
+        }
+        return false
+      })
+      if (currentSection) setActiveSection(currentSection)
+    }
 
-  window.addEventListener('scroll', handleScroll)
-  return () => window.removeEventListener('scroll', handleScroll)
-}, [])
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
-return (
-  <div className="min-h-screen bg-gradient-to-br from-[#E8F5E9] to-[#E3F2FD] flex flex-col">
-    <header className="sticky top-0 w-full py-4 bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-        <Link href="/" className="flex items-center space-x-2">
-          <Image src="/logo.png" alt="PhysiCell Logo" width={40} height={40} className="w-10 h-10" />
-          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#4CAF50] to-[#2196F3]">PhysiCell</span>
-        </Link>
-        <nav className="hidden md:flex space-x-1">
-          {['Home', 'About', 'Features', 'Documentation', 'Downloads', 'Contact'].map((item) => (
-            <Link key={item} href={item === 'Features' ? '#' :  item === 'Documentation' ? '#' : item === 'Downloads' ? '#' : item === 'Home' ? '/' : `/${item.toLowerCase()}`}>
-              <Button variant="ghost" className={`text-[#333] hover:text-[#4CAF50] hover:bg-[#E8F5E9] transition-all duration-300 ${activeSection === item.toLowerCase() ? 'bg-[#E8F5E9] text-[#4CAF50]' : ''}`}>
-                {item}
-              </Button>
-            </Link>
-          ))}
-        </nav>
-        <Button variant="ghost" className="md:hidden text-[#333]" onClick={toggleMenu}>
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </Button>
-      </div>
-    </header>
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-[#E8F5E9] to-[#E3F2FD] flex flex-col">
+      <header className="sticky top-0 w-full py-4 bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+          <Link href="/" className="flex items-center space-x-2">
+            <Image src="/logo.png" alt="PhysiCell Logo" width={40} height={40} className="w-10 h-10" />
+            <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#4CAF50] to-[#2196F3]">PhysiCell</span>
+          </Link>
+          <nav className="hidden md:flex space-x-1">
+            {['Home', 'About', 'Features', 'Documentation', 'Downloads', 'Contact'].map((item) => (
+              <Link key={item} href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}>
+                <Button variant="ghost" className={`text-[#333] hover:text-[#4CAF50] hover:bg-[#E8F5E9] transition-all duration-300 ${activeSection === item.toLowerCase() ? 'bg-[#E8F5E9] text-[#4CAF50]' : ''}`}>
+                  {item}
+                </Button>
+              </Link>
+            ))}
+          </nav>
+          <Button variant="ghost" className="md:hidden text-[#333]" onClick={toggleMenu}>
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </Button>
+        </div>
+      </header>
 
     <AnimatePresence>
       {isMenuOpen && (
