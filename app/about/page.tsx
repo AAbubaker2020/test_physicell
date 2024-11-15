@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Menu, X, CheckCircle, Users, Code, Globe, Quote, ChevronRight } from 'lucide-react'
+import { Menu, X, CheckCircle, Users, Code, Globe, Quote, ChevronRight, Microscope, Grid, FileText } from 'lucide-react'
 
 
 const socialButtonStyles = {
