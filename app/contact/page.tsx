@@ -101,7 +101,7 @@ export default function Contact() {
               Get in Touch
             </h1>
             <p className="text-xl text-[#333] max-w-2xl mx-auto">
-              We're here to answer any questions you may have about PhysiCell. Reach out and we'll respond as soon as we can.
+              We&apos;re here to answer any questions you may have about PhysiCell. Reach out and we&apos;ll respond as soon as we can.
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
