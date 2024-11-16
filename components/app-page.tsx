@@ -320,7 +320,8 @@ export default function HomePage() {
               <ul className="space-y-2 text-sm sm:text-base">
                 {['Home', 'About', 'Features', 'Documentation', 'Download', 'Contact'].map((item) => (
                   <li key={item}>
-                    <Link href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}>
+                      <Link key={item} href={item === 'Features' ? '#' :  item === 'Documentation' ? '#' : item === 'Downloads' ? '#' : item === 'Home' ? '/' : `/${item.toLowerCase()}`}>
+
                       <Button
                         variant="link"
                         className="text-[#555] hover:text-[#4CAF50] p-0 transition-colors duration-300"
