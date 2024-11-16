@@ -295,28 +295,29 @@ export default function HomePage() {
       </main>
 
       <footer className="bg-gradient-to-r from-[#4CAF50]/10 to-[#2196F3]/10 text-[#333] py-8 sm:py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="col-span-1 sm:col-span-2 lg:col-span-1 order-1 sm:order-1">
-              <div className="flex items-center mb-4">
-                <Image
-                  src="/logo.png"
-                  alt="PhysiCell Logo"
-                  width={40}
-                  height={40}
-                  className="mr-3"
-                />
-                <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#4CAF50] to-[#2196F3]">
-                  PhysiCell
-                </h3>
-              </div>
-              <p className="text-[#555] text-sm sm:text-base leading-relaxed">
-                Open source, agent-based modeling framework for 3-D multicellular
-                simulations.
-              </p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+          <div className="col-span-1 md:col-span-2 lg:col-span-1">
+            <div className="flex items-center mb-4">
+              <Image
+                src="/logo.png"
+                alt="PhysiCell Logo"
+                width={40}
+                height={40}
+                className="mr-3"
+              />
+              <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#4CAF50] to-[#2196F3]">
+                PhysiCell
+              </h3>
             </div>
+            <p className="text-[#555] text-sm sm:text-base leading-relaxed mb-6">
+              Open source, agent-based modeling framework for 3-D multicellular
+              simulations.
+            </p>
+          </div>
 
-            <div className="col-span-1 sm:col-span-1 lg:col-span-1 order-2 sm:order-2">
+          <div className="grid grid-cols-2 gap-8 md:gap-12 col-span-1 md:col-span-2 lg:col-span-2">
+            <div>
               <h4 className="text-lg font-semibold mb-4 text-[#333]">Quick Links</h4>
               <ul className="space-y-2 text-sm sm:text-base">
                 {['Home', 'About', 'Features', 'Documentation', 'Download', 'Contact'].map((item) => (
@@ -334,7 +335,7 @@ export default function HomePage() {
               </ul>
             </div>
 
-            <div className="col-span-1 sm:col-span-1 lg:col-span-1 order-3 sm:order-3">
+            <div>
               <h4 className="text-lg font-semibold mb-4 text-[#333]">Resources</h4>
               <ul className="space-y-2 text-sm sm:text-base">
                 {['Documentation', 'Tutorials', 'Publications', 'Community'].map((item) => (
@@ -349,53 +350,54 @@ export default function HomePage() {
                 ))}
               </ul>
             </div>
+          </div>
 
-            <div className="col-span-1 sm:col-span-2 lg:col-span-1 order-4 sm:order-4">
-              <h4 className="text-lg font-semibold mb-4 text-[#333]">Stay Connected</h4>
-              <p className="text-[#555] text-sm sm:text-base mb-4 leading-relaxed">
-                Sign up for our newsletter for updates.
-              </p>
-              <form className="flex flex-col space-y-2">
-                <Input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="bg-white/50 border border-gray-300 rounded px-3 py-2 text-sm sm:text-base placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#4CAF50]"
-                />
-                <Button className="bg-gradient-to-r from-[#4CAF50] to-[#2196F3] text-white font-semibold py-2 rounded hover:from-[#45a049] hover:to-[#1e88e5] transition-all duration-300">
-                  Sign Up
-                </Button>
-              </form>
-              <div className="flex space-x-4 mt-6">
-                {[
-                  { name: 'Facebook', icon: 'M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z', color: '#1877F2' },
-                  { name: 'Twitter', icon: 'M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z', color: '#1DA1F2' },
-                  { name: 'GitHub', icon: 'M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z', color: '#333' },
-                ].map((social) => (
-                  <a
-                    key={social.name}
-                    href="#"
-                    className="inline-block p-2 w-10 h-10 bg-gray-100 rounded hover:opacity-80 shadow-md"
-                    style={{ backgroundColor: social.color }}
-                    aria-label={social.name}
+          <div className="col-span-1 md:col-span-2 lg:col-span-1">
+            <h4 className="text-lg font-semibold mb-4 text-[#333]">Stay Connected</h4>
+            <p className="text-[#555] text-sm sm:text-base mb-4 leading-relaxed">
+              Sign up for our newsletter for updates.
+            </p>
+            <form className="flex flex-col space-y-2 mb-6">
+              <Input
+                type="email"
+                placeholder="Enter your email"
+                className="bg-white/50 border border-gray-300 rounded px-3 py-2 text-sm sm:text-base placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#4CAF50]"
+              />
+              <Button className="bg-gradient-to-r from-[#4CAF50] to-[#2196F3] text-white font-semibold py-2 rounded hover:from-[#45a049] hover:to-[#1e88e5] transition-all duration-300">
+                Sign Up
+              </Button>
+            </form>
+            <div className="flex space-x-4">
+              {[
+                { name: 'Facebook', icon: 'M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z', color: '#1877F2' },
+                { name: 'Twitter', icon: 'M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z', color: '#1DA1F2' },
+                { name: 'GitHub', icon: 'M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z', color: '#333' },
+              ].map((social) => (
+                <a
+                  key={social.name}
+                  href="#"
+                  className="inline-block p-2 w-10 h-10 bg-gray-100 rounded hover:opacity-80 shadow-md transition-opacity duration-300"
+                  style={{ backgroundColor: social.color }}
+                  aria-label={social.name}
+                >
+                  <svg
+                    className="h-6 w-6 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
                   >
-                    <svg
-                      className="h-6 w-6 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d={social.icon} />
-                    </svg>
-                  </a>
-                ))}
-              </div>
+                    <path d={social.icon} />
+                  </svg>
+                </a>
+              ))}
             </div>
           </div>
-
-          <div className="mt-8 pt-4 border-t border-gray-200 text-sm text-[#555] text-center sm:text-left">
-            <p>&copy; {new Date().getFullYear()} PhysiCell. All rights reserved.</p>
-          </div>
         </div>
-      </footer>
+
+        <div className="mt-8 pt-8 border-t border-gray-200 text-sm text-[#555] text-center">
+          <p>&copy; {new Date().getFullYear()} PhysiCell. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
 
 
 
