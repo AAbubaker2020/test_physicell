@@ -8,9 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card"
-import { Download, FileText, Grid, Menu, Microscope, X, ChevronRight } from 'lucide-react';
-
-
+import { Download, FileText, Grid, Menu, Microscope, X, ChevronRight } from 'lucide-react'
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -66,9 +64,9 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-white shadow-md absolute top-16 left-0 right-0 z-40"
+            className="md:hidden bg-white shadow-md fixed top-[60px] left-0 right-0 z-40"
           >
-            <nav className="flex flex-col space-y-2 p-4">
+            <nav className="flex flex-col space-y-2 p-4 max-h-[calc(100vh-60px)] overflow-y-auto">
               {['Home', 'About', 'Features', 'Documentation', 'Downloads', 'Contact'].map((item) => (
                 <Link key={item} href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}>
                   <Button variant="ghost" className="w-full text-left text-[#333] hover:text-[#4CAF50] hover:bg-[#E8F5E9] justify-start">
