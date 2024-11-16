@@ -10,11 +10,7 @@ import Textarea from "@/components/ui/textarea"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Mail, Phone, MapPin, Menu, X, Users, Grid } from 'lucide-react'
 
-const socialButtonStyles = {
-  facebook: 'bg-[#1877F2] hover:text-[#1877F2] border-[#1877F2]',
-  twitter: 'bg-[#1DA1F2] hover:text-[#1DA1F2] border-[#1DA1F2]',
-  github: 'bg-[#333333] hover:text-[#333333] border-[#333333]'
-};
+
 
 export default function Contact() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)

@@ -10,11 +10,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Menu, X, CheckCircle, Users, Code, Globe, Quote, ChevronRight, Microscope, Grid, FileText } from 'lucide-react'
 
 
-const socialButtonStyles = {
-  facebook: 'bg-[#1877F2] hover:text-[#1877F2] border-[#1877F2]',
-  twitter: 'bg-[#1DA1F2] hover:text-[#1DA1F2] border-[#1DA1F2]',
-  github: 'bg-[#333333] hover:text-[#333333] border-[#333333]'
-};
 
 export default function About() {
 const [isMenuOpen, setIsMenuOpen] = useState(false)

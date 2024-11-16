@@ -10,11 +10,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card"
 import { Download, FileText, Grid, Menu, Microscope, X, ChevronRight } from 'lucide-react';
 
-const socialButtonStyles = {
-  facebook: 'bg-[#1877F2] hover:text-[#1877F2] border-[#1877F2]',
-  twitter: 'bg-[#1DA1F2] hover:text-[#1DA1F2] border-[#1DA1F2]',
-  github: 'bg-[#333333] hover:text-[#333333] border-[#333333]'
-};
+
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
