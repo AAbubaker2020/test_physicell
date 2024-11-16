@@ -191,64 +191,64 @@ export default function HomePage() {
         </section>
 
         <section id="resources" className="py-16 sm:py-20 bg-gradient-to-br from-[#E8F5E9] to-[#E3F2FD]">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
-                    className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center text-[#333]"
-                  >
-                    Resources
-                  </motion.h2>
-                  <Tabs defaultValue="documentation" className="w-full">
-                    <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 rounded-lg bg-white p-1 shadow mb-6">
-                      {['Documentation', 'Tutorials', 'Publications', 'Community'].map((tab) => (
-                        <TabsTrigger 
-                          key={tab} 
-                          value={tab.toLowerCase()} 
-                          className="rounded-md py-2 px-1 text-xs sm:text-sm font-medium transition-all focus:outline-none focus:ring-2 focus:ring-[#4CAF50] focus:ring-opacity-50 data-[state=active]:bg-[#4CAF50] data-[state=active]:text-white"
-                        >
-                          {tab}
-                        </TabsTrigger>
-                      ))}
-                    </TabsList>
-                    {['documentation', 'tutorials', 'publications', 'community'].map((tab) => (
-                      <TabsContent key={tab} value={tab}>
-                        <Card className="shadow-lg border-t-4 border-[#4CAF50] bg-white">
-                          <CardHeader>
-                            <CardTitle className="text-xl sm:text-2xl font-semibold text-[#333]">
-                              {tab.charAt(0).toUpperCase() + tab.slice(1)}
-                            </CardTitle>
-                            <CardDescription className="text-sm sm:text-base text-[#555]">
-                              {tab === 'documentation' && "Everything you need to get started and master PhysiCell"}
-                              {tab === 'tutorials' && "Learn through hands-on examples"}
-                              {tab === 'publications' && "Explore the scientific impact of PhysiCell"}
-                              {tab === 'community' && "Connect with other researchers and developers"}
-                            </CardDescription>
-                          </CardHeader>
-                          <CardContent>
-                            <p className="text-[#555] text-sm sm:text-base md:text-lg">
-                              {tab === 'documentation' && "Our documentation covers installation, basic usage, advanced features, and API references, ensuring you have all the information at your fingertips."}
-                              {tab === 'tutorials' && "From beginner to advanced, our tutorials guide you through real-world modeling scenarios, helping you apply PhysiCell to your research effectively."}
-                              {tab === 'publications' && "Browse through peer-reviewed publications that have utilized PhysiCell in groundbreaking research across various fields of computational biology."}
-                              {tab === 'community' && "Participate in forums, contribute to the project, and attend workshops and conferences. Be part of a thriving community pushing the boundaries of computational biology."}
-                            </p>
-                          </CardContent>
-                          <CardFooter>
-                            <Button className="w-full sm:w-auto bg-gradient-to-r from-[#4CAF50] to-[#45a049] text-white hover:from-[#45a049] hover:to-[#4CAF50] transition-all duration-300">
-                              {tab === 'documentation' && "Explore Docs"}
-                              {tab === 'tutorials' && "Start Learning"}
-                              {tab === 'publications' && "View Publications"}
-                              {tab === 'community' && "Get Involved"}
-                            </Button>
-                          </CardFooter>
-                        </Card>
-                      </TabsContent>
-                    ))}
-                  </Tabs>
-                </div>
-            </section>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center text-[#333]"
+        >
+          Resources
+        </motion.h2>
+        <Tabs defaultValue="documentation" className="w-full">
+          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 rounded-lg bg-white p-1 shadow mb-6">
+            {['Documentation', 'Tutorials', 'Publications', 'Community'].map((tab) => (
+              <TabsTrigger 
+                key={tab} 
+                value={tab.toLowerCase()} 
+                className="rounded-md py-2 px-1 text-xs sm:text-sm font-medium transition-all focus:outline-none focus:ring-2 focus:ring-[#4CAF50] focus:ring-opacity-50 data-[state=active]:bg-[#4CAF50] data-[state=active]:text-white"
+              >
+                {tab}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+          {['documentation', 'tutorials', 'publications', 'community'].map((tab) => (
+            <TabsContent key={tab} value={tab}>
+              <Card className="shadow-lg border-t-4 border-[#4CAF50] bg-white">
+                <CardHeader>
+                  <CardTitle className="text-xl sm:text-2xl font-semibold text-[#333]">
+                    {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                  </CardTitle>
+                  <CardDescription className="text-sm sm:text-base text-[#555]">
+                    {tab === 'documentation' && "Everything you need to get started and master PhysiCell"}
+                    {tab === 'tutorials' && "Learn through hands-on examples"}
+                    {tab === 'publications' && "Explore the scientific impact of PhysiCell"}
+                    {tab === 'community' && "Connect with other researchers and developers"}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-[#555] text-sm sm:text-base md:text-lg">
+                    {tab === 'documentation' && "Our documentation covers installation, basic usage, advanced features, and API references, ensuring you have all the information at your fingertips."}
+                    {tab === 'tutorials' && "From beginner to advanced, our tutorials guide you through real-world modeling scenarios, helping you apply PhysiCell to your research effectively."}
+                    {tab === 'publications' && "Browse through peer-reviewed publications that have utilized PhysiCell in groundbreaking research across various fields of computational biology."}
+                    {tab === 'community' && "Participate in forums, contribute to the project, and attend workshops and conferences. Be part of a thriving community pushing the boundaries of computational biology."}
+                  </p>
+                </CardContent>
+                <CardFooter>
+                  <Button className="w-full sm:w-auto bg-gradient-to-r from-[#4CAF50] to-[#45a049] text-white hover:from-[#45a049] hover:to-[#4CAF50] transition-all duration-300">
+                    {tab === 'documentation' && "Explore Docs"}
+                    {tab === 'tutorials' && "Start Learning"}
+                    {tab === 'publications' && "View Publications"}
+                    {tab === 'community' && "Get Involved"}
+                  </Button>
+                </CardFooter>
+              </Card>
+            </TabsContent>
+          ))}
+        </Tabs>
+      </div>
+    </section>
 
         <section id="get-started" className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
