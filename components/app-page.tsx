@@ -88,7 +88,7 @@ export default function HomePage() {
           </div>
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="flex flex-col lg:flex-row items-center gap-12">
+            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -120,7 +120,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
-                className="flex-1 grid grid-cols-2 gap-4 w-full max-w-md mx-auto lg:max-w-none"
+                className="flex-1 grid grid-cols-2 sm:grid-cols-2 gap-4 w-full max-w-md mx-auto lg:max-w-none"
               >
                 {[
                   { day: 0, cells: 18317, color: '#2A9D8F' },
@@ -135,7 +135,7 @@ export default function HomePage() {
                     <span className="absolute top-2 left-2 bg-[#4CAF50] text-white text-xs px-2 py-1 rounded z-10">
                       Day {item.day} - {item.cells} cells
                     </span>
-                    <div className="relative w-full pb-[100%]">
+                    <div className="relative w-full h-48 sm:h-40 md:h-48">
                       <Image
                         src={`/${index + 1}.png`}
                         alt={`Cell simulation at day ${item.day}`}
@@ -150,7 +150,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
 
         <section id="features" className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -297,8 +296,8 @@ export default function HomePage() {
 
       <footer className="bg-gradient-to-r from-[#4CAF50]/10 to-[#2196F3]/10 text-[#333] py-8 sm:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="col-span-1 sm:col-span-2 lg:col-span-1">
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="col-span-1 sm:col-span-2 lg:col-span-1 order-1 sm:order-1">
               <div className="flex items-center mb-4">
                 <Image
                   src="/logo.png"
@@ -317,7 +316,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div>
+            <div className="col-span-1 sm:col-span-1 lg:col-span-1 order-2 sm:order-2">
               <h4 className="text-lg font-semibold mb-4 text-[#333]">Quick Links</h4>
               <ul className="space-y-2 text-sm sm:text-base">
                 {['Home', 'About', 'Features', 'Documentation', 'Download', 'Contact'].map((item) => (
@@ -335,7 +334,7 @@ export default function HomePage() {
               </ul>
             </div>
 
-            <div>
+            <div className="col-span-1 sm:col-span-1 lg:col-span-1 order-3 sm:order-3">
               <h4 className="text-lg font-semibold mb-4 text-[#333]">Resources</h4>
               <ul className="space-y-2 text-sm sm:text-base">
                 {['Documentation', 'Tutorials', 'Publications', 'Community'].map((item) => (
@@ -351,7 +350,7 @@ export default function HomePage() {
               </ul>
             </div>
 
-            <div className="col-span-1 sm:col-span-2 lg:col-span-1">
+            <div className="col-span-1 sm:col-span-2 lg:col-span-1 order-4 sm:order-4">
               <h4 className="text-lg font-semibold mb-4 text-[#333]">Stay Connected</h4>
               <p className="text-[#555] text-sm sm:text-base mb-4 leading-relaxed">
                 Sign up for our newsletter for updates.
@@ -392,7 +391,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="mt-8 sm:mt-12 border-t border-gray-200 pt-4 sm:pt-8 text-sm text-[#555]">
+          <div className="mt-8 pt-4 border-t border-gray-200 text-sm text-[#555] text-center sm:text-left">
             <p>&copy; {new Date().getFullYear()} PhysiCell. All rights reserved.</p>
           </div>
         </div>
