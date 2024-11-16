@@ -82,81 +82,79 @@ export default function HomePage() {
       </AnimatePresence>
 
       <main className="flex-grow">
-      <section
-  id="hero"
-  className="py-16 sm:py-24 relative overflow-hidden bg-gradient-to-r from-[#4CAF50]/10 to-[#2196F3]/10"
->
-  {/* Background Grid */}
-  <div className="absolute inset-0">
-    <Grid className="w-full h-full text-[#4CAF50]/20" />
-  </div>
+      <section id="hero" className="py-16 sm:py-24 relative overflow-hidden bg-gradient-to-r from-[#4CAF50]/10 to-[#2196F3]/10">
+          {/* Background Grid */}
+          <div className="absolute inset-0">
+            <Grid className="w-full h-full text-[#4CAF50]/20" />
+          </div>
 
-  {/* Content Container */}
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <div className="flex flex-col lg:flex-row items-center gap-12">
-      {/* Text Content */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="flex-1 text-center lg:text-left"
-      >
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-[#333] leading-tight">
-          Revolutionize Your Cell Modeling
-        </h1>
-        <p className="text-lg sm:text-xl mb-8 text-[#555] max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-          PhysiCell: Advanced open-source physics-based cell simulator for
-          cancer research and beyond
-        </p>
-        <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-          <Button className="bg-gradient-to-r from-[#4CAF50] to-[#45a049] text-white px-6 py-3 rounded hover:from-[#45a049] hover:to-[#4CAF50] transition-all duration-300 text-sm sm:text-base">
-            Get Started
-            <ChevronRight className="ml-2 h-4 w-4" />
-          </Button>
-          <Button
-            variant="outline"
-            className="border-[#2196F3] text-[#2196F3] px-6 py-3 rounded hover:bg-[#2196F3] hover:text-white transition-all duration-300 text-sm sm:text-base"
-          >
-            Learn More
-          </Button>
-        </div>
-      </motion.div>
+          {/* Content Container */}
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="flex flex-col lg:flex-row items-center gap-12">
+              {/* Text Content */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="flex-1 text-center lg:text-left"
+              >
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-[#333] leading-tight">
+                  Revolutionize Your Cell Modeling
+                </h1>
+                <p className="text-lg sm:text-xl mb-8 text-[#555] max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                  PhysiCell: Advanced open-source physics-based cell simulator for
+                  cancer research and beyond
+                </p>
+                <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                  <Button className="bg-gradient-to-r from-[#4CAF50] to-[#45a049] text-white px-6 py-3 rounded hover:from-[#45a049] hover:to-[#4CAF50] transition-all duration-300 text-sm sm:text-base">
+                    Get Started
+                    <ChevronRight className="ml-2 h-4 w-4" />
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="border-[#2196F3] text-[#2196F3] px-6 py-3 rounded hover:bg-[#2196F3] hover:text-white transition-all duration-300 text-sm sm:text-base"
+                  >
+                    Learn More
+                  </Button>
+                </div>
+              </motion.div>
 
-      {/* Image Grid */}
-      <motion.div
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-        className="flex-1 grid grid-cols-2 gap-4"
-      >
-        {[
-          { day: 0, cells: 18317, color: '#2A9D8F' },
-          { day: 7, cells: 53600, color: '#008B8B' },
-          { day: 15, cells: 91189, color: '#006666' },
-          { day: 21, cells: 66978, color: '#003333' },
-        ].map((item, index) => (
-          <div
-            key={index}
-            className="relative p-2 bg-white rounded-lg shadow-lg overflow-hidden group"
-          >
-            <span className="absolute top-2 left-2 bg-[#4CAF50] text-white text-xs px-2 py-1 rounded z-10">
-              Day {item.day} - {item.cells} cells
-            </span>
-            <div className="relative h-40 sm:h-48 w-full">
-              <Image
-                src={`/${index + 1}.png`}
-                alt={`Cell simulation at day ${item.day}`}
-                layout="fill"
-                objectFit="cover"
-                className="rounded-md transition-transform duration-300 group-hover:scale-110"
-              />
+              {/* Image Grid */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-4"
+              >
+                {[
+                  { day: 0, cells: 18317, color: '#2A9D8F' },
+                  { day: 7, cells: 53600, color: '#008B8B' },
+                  { day: 15, cells: 91189, color: '#006666' },
+                  { day: 21, cells: 66978, color: '#003333' },
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className="relative p-2 bg-white rounded-lg shadow-lg overflow-hidden group"
+                  >
+                    <span className="absolute top-2 left-2 bg-[#4CAF50] text-white text-xs px-2 py-1 rounded z-10">
+                      Day {item.day} - {item.cells} cells
+                    </span>
+                    <div className="relative w-full h-48 sm:h-40 md:h-48">
+                      <Image
+                        src={`/${index + 1}.png`}
+                        alt={`Cell simulation at day ${item.day}`}
+                        layout="fill"
+                        objectFit="cover"
+                        className="rounded-md transition-transform duration-300 group-hover:scale-110"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </motion.div>
             </div>
           </div>
-        ))}
-      </motion.div>
-    </div>
-  </div>
-</section>
+        </section>
+
 
 
         <section id="features" className="py-20 bg-white">
