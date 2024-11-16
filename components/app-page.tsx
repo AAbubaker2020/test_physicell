@@ -393,7 +393,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-gray-200 text-sm text-[#555] text-center">
+        <div className="mt-8 pt-8 border-t border-gray-200 text-sm text-[#555] text-left">
           <p>&copy; {new Date().getFullYear()} PhysiCell. All rights reserved.</p>
         </div>
       </div>
